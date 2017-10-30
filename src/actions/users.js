@@ -7,7 +7,7 @@ export function setUsers(data){
 
 export function getUsers(){
     return dispatch=>{
-        fetch('/api/get-users',{
+        fetch('http://localhost:3030/api/get-users',{
             method:'get'
         })
         .then(res=>res.json())
