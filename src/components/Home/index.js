@@ -1,39 +1,52 @@
 import React, { Component } from 'react';
-import {connect} from 'react-redux';
-import {getUsers} from '../../actions/users';
-import { Container, Header, Title, Content, Footer, FooterTab, Button, Left, Right, Body, Icon, Text } from 'native-base';
+import { Container, Header, Title, Content, Footer, FooterTab, Button, Left, Right, Body, Icon, Text,Item,Input,H2 } from 'native-base';
+
+import Tours from './Tours';
 
 class Home extends Component {
-  constructor(props){
-    super(props);
-    this.state={}
-  }
-  componentWillMount() {
-    this.props.getUsers();
-  }
   render() {
-    console.log(this.props);
     return (
-      <Container>
-        <Header style={{backgroundColor:'transparent'}}>
-          <Left>
-            <Button transparent>
-              <Icon name='menu' />
-            </Button>
-          </Left>
-            <Right />
+      <Container style={{flex:1,backgroundColor:'transparent'}}>
+        <Header searchBar style={{backgroundColor:'transparent',elevation:0,shadowOffset:{height:0,width:0},shadowOpacity:0}} transparent noShadow>
+          <Item style={{flex:1,backgroundColor:'transparent'}}>
+            <Icon name="ios-search" />
+            <Input placeholder="Search" />
+          </Item>
         </Header>
-        <Content>
-          <Text>This is Content Section</Text>
-        </Content>
+        <Body style={{flex:1,width:'100%'}}>
+          <Title>Tours near: Mexico City</Title>
+          <Tours style={{flex:1}} />
+        </Body>
+        <Footer>
+          <FooterTab>
+            <Button vertical active>
+              <Icon name="home"/>
+              <Text>Home</Text>
+            </Button>
+          </FooterTab>
+          <FooterTab>
+            <Button vertical>
+              <Icon name="calendar"/>
+              <Text>Reservations</Text>
+            </Button>
+          </FooterTab>
+          <FooterTab>
+            <Button vertical>
+              <Icon name="bookmark"/>
+              <Text>Saved</Text>
+            </Button>
+          </FooterTab>
+          <FooterTab>
+            <Button vertical>
+              <Icon name="person"/>
+              <Text>Profile</Text>
+            </Button>
+          </FooterTab>
+        </Footer>
       </Container>
     );
   }
 }
 
-let mapStateToProps=state=>{
-  return{
-    users:state.users
-  }
-}
-export default connect(mapStateToProps,{getUsers})(Home);
+
+export default Home;

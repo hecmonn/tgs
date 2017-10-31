@@ -11,6 +11,6 @@ export function getUsers(){
             method:'get'
         })
         .then(res=>res.json())
-        .then(data=>dispatch(setUsers(data)))
+        .then(data=>dispatch(setUsers(data.response)))
     }
 }

@@ -6,8 +6,7 @@ import thunkMiddleware from 'redux-thunk';
 import createLogger from 'redux-logger';
 import Home from './src/components/Home';
 import {rootReducer} from './src/reducers';
-
-//onst loggerMidd=createLogger({predicate: (getState,action)=>__DEV__});
+import App from './src/components';
 
 const store = createStore(
   rootReducer,
@@ -20,7 +19,7 @@ class Main extends Component{
   render (){
     return (
       <Provider store={store}>
-        <Home />
+        <App />
       </Provider>
     )
   }
