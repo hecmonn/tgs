@@ -4,7 +4,13 @@ import { Container, Header, Title, Content, Footer, FooterTab, Button, Left, Rig
 import Tours from './Tours';
 
 class Home extends Component {
+  constructor(props){
+    super(props);
+    this.state={}
+  }
   render() {
+    console.log(this.props);
+    const {navigation}=this.props;
     return (
       <Container style={{flex:1,backgroundColor:'transparent'}}>
         <Header searchBar style={{backgroundColor:'transparent',elevation:0,shadowOffset:{height:0,width:0},shadowOpacity:0}} transparent noShadow>
@@ -17,32 +23,6 @@ class Home extends Component {
           <Title>Tours near: Mexico City</Title>
           <Tours style={{flex:1}} />
         </Body>
-        <Footer>
-          <FooterTab>
-            <Button vertical active>
-              <Icon name="home"/>
-              <Text>Home</Text>
-            </Button>
-          </FooterTab>
-          <FooterTab>
-            <Button vertical>
-              <Icon name="calendar"/>
-              <Text>Reservations</Text>
-            </Button>
-          </FooterTab>
-          <FooterTab>
-            <Button vertical>
-              <Icon name="bookmark"/>
-              <Text>Saved</Text>
-            </Button>
-          </FooterTab>
-          <FooterTab>
-            <Button vertical>
-              <Icon name="person"/>
-              <Text>Profile</Text>
-            </Button>
-          </FooterTab>
-        </Footer>
       </Container>
     );
   }

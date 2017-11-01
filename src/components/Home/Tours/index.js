@@ -7,7 +7,7 @@ class Tours extends React.Component {
     constructor(props){
       super(props);
       this.state={
-        loading:false
+        loading :false
       }
     }
     emptyTours=(
@@ -26,6 +26,7 @@ class Tours extends React.Component {
     }
     render() {
       const {loading}=this.state;
+      console.log(loading);
       let toursRender=this.props.tours.length>0?this.tourCards():this.emptyTours;
       return(
         <Container style={{width:'100%'}}>
