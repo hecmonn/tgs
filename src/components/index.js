@@ -1,9 +1,9 @@
 import React, { PropTypes } from 'react'
 import {Container} from 'native-base';
 import {TabNavigator} from 'react-navigation';
-import {Icon,Text} from 'native-base';
+import {Icon} from 'native-base';
 import Home from './Home';
-import Profile from './Profile';
+import Profile from './Profile/Navigator';
 import Reservations from './Reservations';
 
 const RootNavigator=TabNavigator({
@@ -11,7 +11,7 @@ const RootNavigator=TabNavigator({
         screen: Home,
         navigationOptions:{
             tabBarLabel:'Home',
-            tabBarIcon: ({tintColor,focused}) => (
+            tabBarIcon: ({focused}) => (
                 <Icon
                     name={focused?'ios-home':'ios-home-outline'}
                     style={{color:'#464646'}}
@@ -24,7 +24,7 @@ const RootNavigator=TabNavigator({
         screen: Reservations,
         navigationOptions:{
             tabBarLabel: 'Reservations',
-            tabBarIcon: ({tintColor,focused}) => (
+            tabBarIcon: ({focused}) => (
                 <Icon
                     name={focused?'ios-calendar':'ios-calendar-outline'}
                     style={{color: '#464646'}}
@@ -37,7 +37,7 @@ const RootNavigator=TabNavigator({
         screen: Profile,
         navigationOptions:{
             tabBarLabel: 'Profile',
-            tabBarIcon: ({tintColor,focused}) => (
+            tabBarIcon: ({focused}) => (
                 <Icon
                     name={focused?'ios-person':'ios-person-outline'}
                     style={{color: '#464646'}}
@@ -47,6 +47,12 @@ const RootNavigator=TabNavigator({
         }
     },
 
+},{
+    tabBarPosition: 'bottom',
+    animationEnabled:true,
+    tabBarOptions:{
+        showLabel:false
+    }
 })
 
 export default RootNavigator;
