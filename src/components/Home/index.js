@@ -9,11 +9,10 @@ class Home extends Component {
     this.state={}
   }
   render() {
-    console.log(this.props);
     const {navigation}=this.props;
     return (
       <Container style={{flex:1,backgroundColor:'transparent'}}>
-        <Header searchBar style={{backgroundColor:'transparent',elevation:0,shadowOffset:{height:0,width:0},shadowOpacity:0}} transparent noShadow>
+        <Header searchBar style={{backgroundColor:'transparent'}} transparent noShadow>
           <Item style={{flex:1,backgroundColor:'transparent'}}>
             <Icon name="ios-search" />
             <Input placeholder="Search" />

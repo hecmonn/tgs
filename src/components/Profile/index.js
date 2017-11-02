@@ -10,6 +10,7 @@ class Profile extends React.Component {
         return(
             <Container style={{flex:1,backgroundColor:'transparent'}}>
                 <Content style={{flex:1}}>
+                    <Header />
                     <H1>Profile</H1>
                     <Button onPress={()=>navigation.navigate('Settings')}><Icon name="settings" /></Button>
                 </Content>

@@ -24,7 +24,7 @@ class TourCard extends React.Component {
                             <Text note>{city_code},{cntry_code}</Text>
                         </Body>
                     </CardItem>
-                    <CardItem>
+                    <CardItem button onPress={()=>navigation.navigate('Tour')}>
                         <Body>
                             <Image source={{uri:'https://i2.wp.com/www.dondeir.com/wp-content/uploads/2017/04/gran-festival-para-ninas-y-ninos-de-la-cdmx-en-zocalo-04.jpg'}} style={{height: 250, borderRadius: 5, width: '100%', flex: 1}} />
                             <Text>{description}</Text>
@@ -33,7 +33,7 @@ class TourCard extends React.Component {
                     <CardItem style={{paddingTop:0}}>
                         <Left />
                         <Body>
-                            <Button transparent>
+                            <Button onPress={()=>console.log('nmpr')} transparent>
                                 <Icon name="ios-calendar-outline" />
                                 <Text note>Book</Text>
                             </Button>

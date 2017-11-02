@@ -5,7 +5,6 @@ class Reservations extends React.Component {
         return(
             <Container>
                 <Content>
-                    <Header style={{backgroundColor:'transparent'}} />
                     <Text>Reservations</Text>
                 </Content>
             </Container>
