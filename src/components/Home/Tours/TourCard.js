@@ -12,6 +12,8 @@ class TourCard extends React.Component {
     }
     render () {
         const {cntry_code,city_code,name,description}=this.props.info;
+        const {navigation}=this.props;
+        console.log(this.props);
         const{booked_db,saved_db}=this.state;
         const booked=booked_db?{icon:'ios-calendar',title:'Booked'}:{icon:'ios-calendar-outline',title:'Book'}
         const saved=saved_db?{icon:'ios-bookmark',title:'Saved'}:{icon:'ios-bookmark-outline',title:'Save'}
@@ -33,8 +35,11 @@ class TourCard extends React.Component {
                     <CardItem style={{paddingTop:0}}>
                         <Left />
                         <Body>
-                            <Button onPress={()=>console.log('nmpr')} transparent>
-                                <Icon name="ios-calendar-outline" />
+                            <Button onPress={()=>{}} transparent>
+                                <Icon
+                                    name="ios-calendar-outline"
+                                    style={{color:'#464646'}}
+                                />
                                 <Text note>Book</Text>
                             </Button>
                         </Body>

@@ -5,6 +5,7 @@ class Reservations extends React.Component {
         return(
             <Container>
                 <Content>
+                    <Header />
                     <Text>Reservations</Text>
                 </Content>
             </Container>

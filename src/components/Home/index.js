@@ -20,7 +20,7 @@ class Home extends Component {
         </Header>
         <Body style={{flex:1,width:'100%'}}>
           <Title>Tours near: Mexico City</Title>
-          <Tours style={{flex:1}} />
+          <Tours navigation={navigation} style={{flex:1}} />
         </Body>
       </Container>
     );

@@ -15,7 +15,7 @@ class Tours extends React.Component {
     )
     tourCards=()=>(
       <Content style={{flex:1, width: '100%'}}>
-        {this.props.tours.map(r=><TourCard info={r} key={r.id}/>)}
+        {this.props.tours.map(r=><TourCard info={r} navigation={this.props.navigation} key={r.id}/>)}
       </Content>
     )
 
@@ -26,7 +26,6 @@ class Tours extends React.Component {
     }
     render() {
       const {loading}=this.state;
-      console.log(loading);
       let toursRender=this.props.tours.length>0?this.tourCards():this.emptyTours;
       return(
         <Container style={{width:'100%'}}>
