@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
+import {Image} from 'react-native';
 import {Content,Header,Text,Button,Left,Right,Body,Icon,Footer,FooterTab} from 'native-base';
-import Carousel from 'react-native-snap-carousel';
+import Carousel from './Carousel';
 
 class Tour extends React.Component {
     constructor(props){
@@ -23,6 +24,7 @@ class Tour extends React.Component {
                 </Header>
                 <Body>
                     <Text>Tour description</Text>
+                    <Carousel />
                 </Body>
                 <Footer>
                     <FooterTab>
